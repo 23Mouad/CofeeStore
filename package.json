@@ -1,0 +1,25 @@
+{
+   "name": "app",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+   },
+   "dependencies": {
+      "@fortawesome/fontawesome-free": "^6.4.2",
+      "@fortawesome/free-solid-svg-icons": "^6.4.2",
+      "@fortawesome/react-fontawesome": "^0.2.0",
+      "animate.css": "^4.1.1",
+      "bootstrap": "^5.3.2",
+      "next": "latest",
+      "react": "latest",
+      "react-dom": "latest"
+   },
+   "devDependencies": {
+      "eslint": "latest",
+      "eslint-config-next": "latest"
+   }
+}
