@@ -3,8 +3,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logonav from "@assets/coffeelogo.png";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+   const pathname = usePathname();
+   const navbarStyle = {
+      backgroundColor: pathname === "/" ? "#fff" : "#ebdbcc",
+   };
+
    return (
       <div
          className="navi d-flex justify-content-between sticky-top"
@@ -35,11 +41,7 @@ const Navbar = () => {
                </li>
             </ul>
          </div>
-         <div className="navi-btn align-items-center d-flex">
-            <button className=" mybtn-one ">
-               <Link href="contact">Let's Talk</Link>
-            </button>
-         </div>
+         <div></div>
       </div>
    );
 };
