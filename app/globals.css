@@ -16,7 +16,7 @@
    --primary-color-light: #bdd0fb;
    --secondary-color: #e4a74b;
    --secondary-color-light: #ffb7b2;
-   --text-color: #000;
+   --text-color: #111;
    --cardback-color: #f6f6f6;
    --mainback-color: #fff;
 }
@@ -30,7 +30,10 @@ ul {
 main {
    box-sizing: border-box;
    background-color: var(--mainback-color) !important;
-   user-select: none;
+}
+
+.halfblc {
+   color: #4f4f4f;
 }
 
 /*! ----------------         NAVBAR SECTION               -------------------- */
@@ -181,18 +184,29 @@ main {
 }
 
 /*! ----------------              HeroPage SECTION               -------------------- */
-
-.heropage .firstpart {
-   padding: 3rem;
+.landingpage {
+   background-image: url("/backgroundmain.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   border-radius: 0 0 125px 125px;
 }
+
 .heropage .firstpart h1 {
    font-size: 60px;
    color: var(--text-color);
+   margin-bottom: 8px;
+   font-weight: 600;
+   font-family: "Fascinate Inline";
+}
+.heropage .firstpart h2 {
+   font-size: 45px;
+   color: var(--secondary-color);
    margin-bottom: 1rem;
    font-weight: 600;
    font-family: "Fascinate Inline";
 }
-.heropage .firstpart h1 span,
+
 .spani {
    color: var(--primary-color);
    font-family: "Lobster", cursive;
@@ -200,7 +214,7 @@ main {
 }
 .heropage .firstpart p {
    font-size: 1rem;
-   color: var(--text-color);
+   color: #4f4f4f;
    margin-bottom: 1rem;
    font-weight: 500;
    font-family: "Montserrat", sans-serif;
@@ -265,9 +279,13 @@ main {
 .btni-full:hover {
    filter: brightness(90%);
 }
-/*! ----------------           WORKS               -------------------- */
-.statics p {
-   font-size: 0.7rem;
+/*! ----------------           Cards               -------------------- */
+.add-to-cart-button {
+   background-color: var(--primary-color);
+   color: #ffffff;
+   border-radius: 50%;
+   width: 35px;
+   height: 35px;
 }
 /*! ----------------           Screen               -------------------- */
 @media screen and (max-width: 768px) {
@@ -289,6 +307,9 @@ main {
    }
    .heropage .firstpart h1 {
       font-size: 2rem;
+   }
+   .heropage .firstpart h2 {
+      font-size: 1.5rem;
    }
    .heropage .firstpart p {
       padding-right: 1rem;

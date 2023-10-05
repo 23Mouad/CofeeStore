@@ -818,7 +818,7 @@ svg {
    justify-content: center;
    align-items: center;
    border-radius: 5px;
-   background: #368BC1 ;
+   background: #368bc1;
    font-family: "Montserrat", sans-serif;
    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
    overflow: hidden;
@@ -830,7 +830,7 @@ svg {
    content: " ";
    width: 0%;
    height: 100%;
-   background: #E58454;
+   background: #e58454;
    position: absolute;
    transition: all 0.4s ease-in-out;
    right: 0;
@@ -872,3 +872,5 @@ svg {
       transform: scale(1);
    }
 }
+
+/* buttons */

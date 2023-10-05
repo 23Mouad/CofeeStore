@@ -3,15 +3,21 @@
 import React, { useState } from "react";
 import fivrrL from "@assets/fivrrL.png";
 import fivrrD from "@assets/fivrrD.png";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+   faLinkedin,
+   faGithub,
+   faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
+
 export default function HeroPage() {
    const [hovered, setHovered] = useState(false);
 
    return (
-      <>
-         <div className="heropage row m-0 mt-1">
+      <div className="landingpage m-0 ">
+         <div className="heropage row m-0 mt-1 p-1 p-md-4">
             <div className="col-12 col-md-6 firstpart order-2 order-md-1">
                <h1 className="animate__animated animate__tada">
                   Sip into Perfection
@@ -24,18 +30,9 @@ export default function HeroPage() {
                   just looking for a great cup of joe, we've got you covered.
                </p>
                <div className="buttons">
-                  <button className="btni-full me-1">
-                     <Link href="/works">My Work</Link>
+                  <button className="btni-full me-1 rounded-5">
+                     <Link href="/works">Shop Now</Link>
                   </button>
-                  <button className="btni-outline">
-                     <Link href="/contact">Hire Me</Link>
-                  </button>
-               </div>
-            </div>
-
-            <div className="col-12 col-md-6 secondpart order-1 order-md-2">
-               <div className="p-5 profile-pic align-items-center justify-content-center ">
-                  {/* <Image src={profile} alt="profile" className=" Image-fluid" /> */}
                </div>
             </div>
          </div>
@@ -51,7 +48,11 @@ export default function HeroPage() {
                         className=""
                         style={{ color: "inherit" }}
                      >
-                        <i className="fa-brands fa-linkedin fs-3"></i>
+                        <FontAwesomeIcon
+                           icon={faLinkedin}
+                           className="fs-3"
+                           size="xl"
+                        />
                      </a>
                   </span>
                </li>
@@ -63,7 +64,7 @@ export default function HeroPage() {
                         href="https://github.com/23Mouad"
                         style={{ color: "inherit" }}
                      >
-                        <i className="fa-brands fa-github fs-3"></i>
+                        <FontAwesomeIcon icon={faGithub} className="fs-3" />
                      </a>
                   </span>
                </li>
@@ -76,7 +77,7 @@ export default function HeroPage() {
                         href="https://www.facebook.com/profile.php?id=100090883335804"
                         style={{ color: "inherit" }}
                      >
-                        <i className="fa-brands fa-facebook fs-3"></i>{" "}
+                        <FontAwesomeIcon icon={faFacebook} className="fs-3" />
                      </a>
                   </span>
                </li>
@@ -94,13 +95,13 @@ export default function HeroPage() {
                         <Image
                            src={hovered ? fivrrD : fivrrL}
                            alt="fiverr"
-                           className="Image-fluid  w-50 "
+                           className="Image-fluid w-50 h-auto"
                         />
                      </a>
                   </span>
                </li>
             </ul>
          </div>
-      </>
+      </div>
    );
 }
