@@ -10,15 +10,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
 
 /* font-family: 'Fascinate Inline' */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap");
+
 /*-------------------------  FONTS SECTION  ----------------------------*/
 :root {
    --primary-color: #683728;
-   --primary-color-light: #bdd0fb;
    --secondary-color: #e4a74b;
-   --secondary-color-light: #ffb7b2;
    --text-color: #111;
    --cardback-color: #f6f6f6;
-   --mainback-color: #ebdbcc;
+   --mainback-color: #efe6de;
 }
 
 ul {
@@ -36,10 +36,16 @@ main {
    color: #4f4f4f;
 }
 
+.fascinate {
+   font-family: "Fascinate Inline";
+   text-align: center;
+   color: var(--primary-color);
+}
+
 /*! ----------------         NAVBAR SECTION               -------------------- */
 .navi {
    color: var(--text-color) !important;
-   display: flex;
+
    /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px !important; */
    padding: 0 20px;
 }
@@ -286,6 +292,32 @@ main {
    width: 35px;
    height: 35px;
 }
+
+/*! ----------------          Ad section             ---------------------*/
+.adsection {
+   background-color: var(--secondary-color);
+   padding: 1.5rem;
+   padding-right: 0;
+   position: relative;
+}
+.adsection .firstPart h1 {
+   font-size: 50px;
+   color: var(--text-color);
+   margin-bottom: 3rem;
+   font-weight: 600;
+   font-family: "Fascinate Inline";
+   text-align: center;
+}
+
+.overflow-image-container {
+   overflow: visible;
+   position: absolute;
+   top: -50px;
+   bottom: -50px;
+   padding: 0;
+   right: 0;
+}
+
 /*! ----------------           Screen               -------------------- */
 @media screen and (max-width: 768px) {
    .navi-links ul li {
@@ -304,7 +336,8 @@ main {
    .heropage .firstpart {
       padding: 2rem;
    }
-   .heropage .firstpart h1 {
+   .heropage .firstpart h1,
+   .adsection .firstPart h1 {
       font-size: 2rem;
    }
    .heropage .firstpart h2 {

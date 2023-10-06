@@ -12,10 +12,7 @@ const Navbar = () => {
    };
 
    return (
-      <div
-         className="navi d-flex justify-content-between sticky-top"
-         id="nav-me"
-      >
+      <div className="navi  justify-content-between d-flex " id="nav-me">
          <div className="navi-logo align-items-center d-flex ">
             <Link className="navbar-brand align-items-center " href="/">
                <Image

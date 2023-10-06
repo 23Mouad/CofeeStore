@@ -1,10 +1,13 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import quality from "@assets/quality.png";
+import barista from "@assets/barista.png";
+import atmosphere from "@assets/atmosphere.png";
+import adimage from "@assets/adimage.png";
 
-const Menu = ({ data }) => {
+const Adsection = ({ data }) => {
    const [visibleItems, setVisibleItems] = useState(getInitialVisibleItems());
 
    const getRandomPrice = () => {
@@ -23,7 +26,6 @@ const Menu = ({ data }) => {
          return 4;
       }
    }
-
    useEffect(() => {
       function handleResize() {
          // Update visible items when the window is resized
@@ -36,13 +38,35 @@ const Menu = ({ data }) => {
       };
    }, []);
 
-   const loadMore = () => {
-      // Increase the number of visible items by a certain amount when "See more" is clicked
-      setVisibleItems(visibleItems + 8); // Change 8 to the desired number
-   };
-
    return (
-      <div>
+      <>
+         <div className="adsection m-0 mt-3 mb-3 row">
+            <div className="firstPart col-12 col-sm-8 p-1 p-md-4">
+               <h1>IT’S ALL ABOUT QUALITY</h1>
+
+               <div className="row mt-1 mt-md-3 ">
+                  <div className="col-4 p-1 p-md-3 d-flex flex-column align-items-center">
+                     <Image src={quality} width={64} height={64} />
+                     <h6 className=" text-center mt-2">Quality Ingredients</h6>
+                  </div>
+
+                  <div className="col-4 p-1 p-md-3 d-flex flex-column align-items-center">
+                     <Image src={barista} width={64} height={64} />
+                     <h6 className=" text-center mt-2">Passionate Baristas</h6>
+                  </div>
+
+                  <div className="col-4 p-1 p-md-3 d-flex flex-column align-items-center">
+                     <Image src={atmosphere} width={64} height={64} />
+                     <h6 className=" text-center mt-2">Cozy Atmosphere</h6>
+                  </div>
+               </div>
+            </div>
+
+            <div className="overflow-image-container d-none d-sm-flex ms-auto col-4">
+               <Image src={adimage} className="ms-auto" />
+            </div>
+         </div>
+
          <h1 className="fascinate mt-1 mb-2 mb-md-4 ">Menu</h1>
          <div className="row m-0 mt-3 p-1 p-md-2 p-lg-4">
             {data.slice(0, visibleItems).map((item, index) => (
@@ -82,23 +106,8 @@ const Menu = ({ data }) => {
                </div>
             ))}
          </div>
-
-         {/* "See more" button */}
-         {visibleItems < data.length && (
-            <div className="row justify-content-center m-0 mb-4">
-               <button
-                  className="btni-full  rounded-5 mt-1"
-                  onClick={loadMore}
-                  style={{
-                     width: "7rem",
-                  }}
-               >
-                  See More
-               </button>
-            </div>
-         )}
-      </div>
+      </>
    );
 };
 
-export default Menu;
+export default Adsection;
