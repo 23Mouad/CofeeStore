@@ -17,13 +17,13 @@ const Adsection = ({ data }) => {
    function getInitialVisibleItems() {
       if (typeof window !== "undefined" && window.innerWidth >= 992) {
          // Large screens
-         return 8;
+         return 4;
       } else if (typeof window !== "undefined" && window.innerWidth >= 768) {
          // Medium screens
-         return 6;
+         return 3;
       } else {
          // Small screens
-         return 4;
+         return 2;
       }
    }
    useEffect(() => {
@@ -55,19 +55,21 @@ const Adsection = ({ data }) => {
                      <h6 className=" text-center mt-2">Passionate Baristas</h6>
                   </div>
 
-                  <div className="col-4 p-1 p-md-3 d-flex flex-column align-items-center">
+                  <div className="col-4 p-0 p-md-3 d-flex flex-column align-items-center">
                      <Image src={atmosphere} width={64} height={64} />
                      <h6 className=" text-center mt-2">Cozy Atmosphere</h6>
                   </div>
                </div>
             </div>
 
-            <div className="overflow-image-container d-none d-sm-flex ms-auto col-4">
+            <div className="overflow-image-container d-none d-sm-flex ms-auto col-4 p-0">
                <Image src={adimage} className="ms-auto" />
             </div>
          </div>
 
-         <h1 className="fascinate mt-1 mb-2 mb-md-4 ">Menu</h1>
+         {/* OUR BEST SECTON */}
+
+         <h1 className="fascinate mt-1 mb-2 mb-md-4 ">Our best</h1>
          <div className="row m-0 mt-3 p-1 p-md-2 p-lg-4">
             {data.slice(0, visibleItems).map((item, index) => (
                <div

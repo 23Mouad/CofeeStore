@@ -318,6 +318,12 @@ main {
    right: 0;
 }
 
+.maps {
+   background-image: url("/maps.png");
+   width: 47% !important;
+   margin-left: auto;
+}
+
 /*! ----------------           Screen               -------------------- */
 @media screen and (max-width: 768px) {
    .navi-links ul li {
