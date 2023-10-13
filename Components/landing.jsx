@@ -42,7 +42,7 @@ export default function HeroPage() {
          </div>
 
          <div className="">
-            <ul className="wrapper">
+            <ul className="wrapper text-black">
                <li className="icon linkedin">
                   <span className="tooltip">Linkedin</span>
                   <span>

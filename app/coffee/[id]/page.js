@@ -5,6 +5,7 @@ import cup from "@assets/Cup.svg";
 import SelectedCup from "@assets/Selected-Cup.svg";
 import location from "@assets/Location.svg";
 import { useParams } from "next/navigation";
+import Navbar from "@Components/navbar";
 import toast, { Toaster } from "react-hot-toast";
 
 const ProductPage = () => {
@@ -69,6 +70,7 @@ const ProductPage = () => {
 
    return (
       <>
+         <Navbar />
          <main className="Product-page">
             <section className="py-5">
                <div className="container">
