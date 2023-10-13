@@ -323,6 +323,357 @@ main {
    width: 47% !important;
    margin-left: auto;
 }
+/*! ---------------         Product Section             ---------------------*/
+.Product-page {
+   font-family: "Work Sans", sans-serif;
+}
+.title {
+   color: #111;
+   font-family: Work Sans;
+   font-size: 70px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+.ingredients {
+   color: rgba(0, 0, 0, 0.7);
+
+   font-size: 23px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: normal;
+}
+.product-descTitle {
+   color: #000;
+   font-family: Work Sans;
+   font-size: 23px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+}
+.product-desc {
+   color: rgba(0, 0, 0, 0.7);
+   font-family: Work Sans;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 0.009px;
+   margin-top: -10px;
+   width: 499px;
+}
+.product-img {
+   width: 480px;
+
+   flex-shrink: 0;
+   border-radius: 50px;
+}
+.location {
+   color: rgba(0, 0, 0, 0.7);
+   font-family: Work Sans;
+   width: 509px;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   text-decoration: none;
+}
+
+.Size-text {
+   margin-top: 8px;
+}
+.cup {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   color: rgba(0, 0, 0, 0.837);
+   font-family: Work Sans;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   opacity: 0.9;
+}
+.Grande-cup {
+   width: 53px;
+   height: 75px;
+   fill: var(--primary-color);
+}
+.Venti-cup {
+   width: 64px;
+   height: 91px;
+}
+.Cup-selected {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   color: var(--primary-color);
+   font-family: Work Sans;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   transition: transform 0.4s ease, opacity 0.3s ease;
+   transform-origin: center bottom;
+   opacity: 1;
+}
+.counter {
+   background-color: #e4a74b;
+   width: 91px;
+   height: 39px;
+   flex-shrink: 0;
+   color: #000;
+   font-family: Work Sans;
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: normal;
+   margin-left: 390px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   border-radius: 50px;
+}
+.order {
+   margin-left: -15px;
+   width: 631px;
+   align-items: center;
+   display: flex;
+   height: 57px;
+   border-radius: 50px;
+   background: rgba(228, 167, 75, 0.25);
+}
+.price {
+   color: #000;
+   font-family: Work Sans;
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+}
+.Price-text {
+   padding-left: 20px;
+   color: #000;
+   font-family: Work Sans;
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+}
+.Order-btn {
+   color: #e9edf2;
+   font-size: 24px;
+   font-family: "Work Sans", sans-serif;
+   align-items: center;
+   font-style: normal;
+   font-weight: 600;
+   line-height: normal;
+   width: 200px;
+   height: 58px;
+   border-radius: 50px;
+   position: relative;
+   padding: 0.7em 1.4em;
+   border: none;
+   user-select: none;
+   overflow: hidden;
+   background: var(--maincolor, #683728);
+   display: flex;
+   cursor: pointer;
+   transition: all 1s;
+
+   z-index: 1;
+}
+
+.Order-btn:hover {
+   color: #000;
+}
+
+.Order-btn::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 0%;
+   top: 0;
+   left: -40px;
+   transform: skewX(45deg);
+   background: linear-gradient(135deg, transparent 0%, transparent 100%)
+      var(--secondary-color);
+   z-index: -1;
+   transition: all 1s;
+}
+
+.Order-btn:hover::before {
+   width: 160%;
+}
+
+@media screen and (max-width: 1064px) {
+   .product-img {
+      width: 100%;
+      flex-shrink: 0;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      height: 580px;
+   }
+   .location {
+      font-size: 25px;
+   }
+   .location img {
+      width: 33px;
+      height: 43px;
+   }
+}
+@media screen and (max-width: 420px) {
+   .mybtn-one {
+      font-size: 12px;
+      padding: 0.25rem 0.25rem;
+   }
+   .title {
+      font-size: 50px;
+   }
+
+   .product-img {
+      width: 100%;
+      flex-shrink: 0;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      height: 380px;
+   }
+   .location {
+      font-size: 15px;
+   }
+   .location img {
+      width: 15px;
+      height: 25px;
+   }
+   .product-desc {
+      width: 340px;
+   }
+   .counter {
+      margin-left: 140px;
+   }
+   .order {
+      margin-left: -10px;
+      width: 341px;
+
+      height: 47px;
+   }
+   .price {
+      font-size: 22px;
+   }
+   .Price-text {
+      font-size: 25px;
+   }
+   .Order-btn {
+      font-size: 15px;
+
+      width: 125px;
+      height: 48px;
+   }
+}
+/*! ----------------            About               -------------------- */
+.aboutPage {
+   font-family: "Work Sans", sans-serif;
+}
+.mindesc {
+   font-weight: 400;
+}
+.minTitle {
+   font-weight: 600;
+}
+.AboutDesc {
+   font-weight: 500;
+   color: #050505bb;
+}
+.AboutTitle {
+   color: var(--text-color);
+
+   font-weight: 600;
+   font-family: "Fascinate Inline";
+}
+/*! ----------------           Footer               -------------------- */
+
+/* Footer Styles */
+footer {
+   background-color: #333;
+   color: #fff;
+   padding: 30px 0;
+   text-align: center;
+}
+
+.footer-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.profile img {
+   width: 100px; /* Adjust the image size as needed */
+   border-radius: 50%; /* Create a circular profile picture */
+   margin-bottom: 20px;
+}
+
+.introduction p {
+   text-align: center;
+   font-size: 18px;
+   margin-bottom: 20px;
+}
+
+.animated-text {
+   display: inline-block;
+   color: #ffcc00; /* Your desired text color */
+   font-size: 24px;
+   animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.sub-text {
+   display: block;
+   color: #fff; /* Your desired text color */
+   font-size: 18px;
+   margin-top: 10px;
+}
+
+.portfolio-link {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #ffcc00; /* Your desired button background color */
+   color: #333; /* Your desired button text color */
+   text-decoration: none;
+   border-radius: 5px;
+   font-weight: bold;
+   transition: background-color 0.3s ease;
+}
+
+.portfolio-link:hover {
+   background-color: #333; /* Change color on hover */
+   color: #ffcc00;
+}
+
+/* Typing Animation */
+@keyframes typing {
+   from {
+      width: 0;
+   }
+   to {
+      width: 100%;
+   }
+}
+
+@keyframes blink-caret {
+   from,
+   to {
+      border-right: 3px solid transparent;
+   }
+   50% {
+      border-right: 3px solid #ffcc00; /* Adjust the caret color as needed */
+   }
+}
 
 /*! ----------------           Screen               -------------------- */
 @media screen and (max-width: 768px) {

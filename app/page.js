@@ -5,6 +5,7 @@ import HeroPage from "@Components/landing";
 import Menu from "@Components/menu";
 import Adsection from "@Components/adsection";
 import Contact from "@Components/contact";
+import Footer from "@Components/footer";
 
 export default function Home() {
    const [data, setData] = useState([]);
@@ -29,6 +30,7 @@ export default function Home() {
          <Menu data={data} />
          <Adsection data={data} />
          <Contact />
+         <Footer />
       </main>
    );
 }
