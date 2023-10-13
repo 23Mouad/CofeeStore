@@ -17,7 +17,7 @@ const page = () => {
                      <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
                         <div class="overlay overlay-bg"></div>
 
-                        <Image class="img-fluid" src={playicon} alt="" />
+                        <Image class="img-fluid" src={playicon} alt="playico" />
                      </div>
                      <div class="col-lg-6 video-left ">
                         <h6 className="mt-3 mindesc">
@@ -43,7 +43,7 @@ const page = () => {
                            our coffee shop is not just a place to enjoy your
                            favorite brew but a community where coffee lovers
                            come together. Join us for a cup of perfection and
-                           make every moment delightful." Feel free to customize
+                           make every moment delightful.Feel free to customize
                            this description to match the specific details and
                            atmosphere of your coffee store.
                         </p>
