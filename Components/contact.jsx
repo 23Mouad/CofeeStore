@@ -26,7 +26,7 @@ const Contact = () => {
    };
 
    return (
-      <div className="p-2 p-md-5 mt-2">
+      <div className="p-2 p-md-5 mt-2" id="contact">
          <h1 className="fascinate mt-1 mb-3 mb-md-4  ">Contact</h1>
          <div className=" row m-0 m-sm-3">
             <div className="contact-form-container col-12 col-md-6 pe-1 ps-1 pe-lg-4 ps-lg-4">

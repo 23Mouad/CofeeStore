@@ -10,13 +10,16 @@ function getRandomInt(min, max) {
 }
 
 export default function Loading() {
-   const cafes = [cafe, cafe1, cafe2, cafe3, cafe4];
-   const randomIndex = getRandomInt(0, cafes.length - 1);
-   const randomCafe = cafes[randomIndex];
-
    return (
-      <div className="flex items-center justify-center h-screen">
-         <img src={randomCafe} alt="Loading..." />
+      <div className="d-flex justify-content-center align-items-center loading ">
+         <div className="🤚">
+            <div className="👉"></div>
+            <div className="👉"></div>
+            <div className="👉"></div>
+            <div className="👉"></div>
+            <div className="🌴"></div>
+            <div className="👍"></div>
+         </div>
       </div>
    );
 }

@@ -11,15 +11,19 @@ const Navbar = () => {
       backgroundColor: pathname === "/" ? "#fff" : "#ebdbcc",
    };
 
+   // Function to handle smooth scrolling to a specific element on the page
+   const scrollToElement = (elementId) => {
+      const element = document.getElementById(elementId);
+      if (element) {
+         element.scrollIntoView({ behavior: "smooth" });
+      }
+   };
+
    return (
-      <div className="navi  justify-content-between d-flex " id="nav-me">
-         <div className="navi-logo align-items-center d-flex ">
-            <Link className="navbar-brand align-items-center " href="/">
-               <Image
-                  className=" Image-fluid "
-                  src={logonav}
-                  alt="Logo "
-               ></Image>
+      <div className="navi justify-content-between d-flex" id="nav-me">
+         <div className="navi-logo align-items-center d-flex">
+            <Link className="navbar-brand align-items-center" href="/">
+               <Image className="Image-fluid" src={logonav} alt="Logo"></Image>
             </Link>
          </div>
          <div className="navi-links align-items-center">
@@ -28,13 +32,17 @@ const Navbar = () => {
                   <Link href="/">Home</Link>
                </li>
                <li>
-                  <Link href="about">About</Link>
+                  <Link href="/about">About</Link>
                </li>
                <li>
-                  <Link href="menu">Menu</Link>
+                  <a href="#" onClick={() => scrollToElement("menu")}>
+                     Menu
+                  </a>
                </li>
                <li>
-                  <Link href="contact">Contact</Link>
+                  <a href="#" onClick={() => scrollToElement("contact")}>
+                     Contact
+                  </a>
                </li>
             </ul>
          </div>

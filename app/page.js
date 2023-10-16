@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import HeroPage from "@Components/landing";
 import Menu from "@Components/menu";
 import Adsection from "@Components/adsection";
