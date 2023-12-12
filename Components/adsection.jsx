@@ -115,7 +115,7 @@ const Adsection = ({ data }) => {
             <div className="row m-0 p-1 p-md-2 p-lg-4">
                {emptyarr.slice(0, 4).map((item, index) => (
                   <div
-                     class="container col-lg-3 col-md-4 col-sm-6 h-screen d-flex justify-content-center align-items-center"
+                     className="container col-lg-3 col-md-4 col-sm-6 h-screen d-flex justify-content-center align-items-center"
                      key={index}
                   >
                      <Skeleton />

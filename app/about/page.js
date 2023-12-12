@@ -11,15 +11,19 @@ const page = () => {
             <h1 className="d-flex justify-content-center AboutTitle mb-3">
                About Us
             </h1>
-            <section class="video-sec-area pb-100 pt-40" id="about">
-               <div class="container-lg">
-                  <div class="row justify-content-start align-items-center">
-                     <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
-                        <div class="overlay overlay-bg"></div>
+            <section className="video-sec-area pb-100 pt-40" id="about">
+               <div className="container-lg">
+                  <div className="row justify-content-start align-items-center">
+                     <div className="col-lg-6 video-right justify-content-center align-items-center d-flex">
+                        <div className="overlay overlay-bg"></div>
 
-                        <Image class="img-fluid" src={playicon} alt="playico" />
+                        <Image
+                           className="img-fluid"
+                           src={playicon}
+                           alt="playico"
+                        />
                      </div>
-                     <div class="col-lg-6 video-left ">
+                     <div className="col-lg-6 video-left ">
                         <h6 className="mt-3 mindesc">
                            Live Coffee making process.
                         </h6>
@@ -47,7 +51,7 @@ const page = () => {
                            this description to match the specific details and
                            atmosphere of your coffee store.
                         </p>
-                        <Image class="img-fluid" src={signature} alt="" />
+                        <Image className="img-fluid" src={signature} alt="" />
                      </div>
                   </div>
                </div>
